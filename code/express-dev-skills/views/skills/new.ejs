@@ -1,0 +1,10 @@
+
+<%- include('../partials/opening.ejs') %>
+
+<form action="/skills" method="POST" autocomplete="off"> 
+    <!-- the autocomment is off --- will prevent autocomplete inputs -->
+    <input type="text" name="skill">
+    <button type="submit">Save skill</button>
+  </form>
+
+  <%- include('../partials/closing.ejs') %>

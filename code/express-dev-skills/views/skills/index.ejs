@@ -1,0 +1,22 @@
+<%- include('../partials/opening.ejs') %>
+    <h1>Skills as of <%= time %> </h1>
+    <a href="/skills/new">Add Skill</a>
+    <ul>
+      <% skills.forEach(function(t) { %>
+        <li>
+          <a href="/skills/<%=t.id%>"><%= t.skill %></a>
+            - 
+          <%= t.done ? 'done' : 'not done' %>
+
+          <form action="/skills/<%= t.id %>?_method=DELETE" method="POST">
+            <button type="Submit">X</button>
+
+        </li>
+
+       
+
+      <% }); %>
+    </ul>
+    
+
+    <%- include('../partials/closing.ejs') %>

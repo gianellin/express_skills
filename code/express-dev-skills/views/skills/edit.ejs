@@ -1,0 +1,20 @@
+
+<%- include('../partials/opening.ejs') %>
+
+<h1>Edit Page</h1>
+
+
+	<form method="POST" action="/skills/<%= skill.id%>?_method=PUT">
+		<input type="text" name="skill" value="<%= skill.skill %> ">
+
+		<input type="checkbox"
+			<% if (skill.done) { %>
+			 checked
+			<% } %>
+		name="done">
+
+		<button type="submit">Save skill</button>
+	</form>
+
+
+  <%- include('../partials/closing.ejs') %>
